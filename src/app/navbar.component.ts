@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { carrello } from './product.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +16,7 @@ import { Component, OnInit } from '@angular/core';
           <a class="nav-link" routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact:true}" aria-current="page" href="#">🏚 Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLinkActive="active" routerLink="/carrello">🛒Carrello </a>
+          <a class="nav-link" routerLinkActive="active" routerLink="/carrello">🛒Carrello ({{carrelloN.length}}) </a>
         </li>
       </ul>
     </div>
@@ -35,7 +36,7 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class NavbarComponent implements OnInit {
-
+carreloN = carrello 
   constructor() { }
 
   ngOnInit(): void {
