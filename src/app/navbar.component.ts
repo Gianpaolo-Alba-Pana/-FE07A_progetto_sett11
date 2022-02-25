@@ -36,7 +36,7 @@ import { carrello } from './product.service';
   ]
 })
 export class NavbarComponent implements OnInit {
-carreloN = carrello 
+carrelloN = carrello 
   constructor() { }
 
   ngOnInit(): void {
